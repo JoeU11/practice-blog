@@ -10,7 +10,7 @@ export default function Blog(blog) {
     <section className="blog-post">
       <img src={blog.image} alt="blog" className="blog-photo" width="700px" />
       <h1 className="blog-title">{blog.title}</h1>
-      <h3 className="blog-subtitle">{blog.subtitle}</h3>
+      {blog.subtitle && <h3 className="blog-subtitle">{blog.subtitle}</h3>}
       <p className="blog-date">{blog.date}</p>
       {parseText}
     </section>
