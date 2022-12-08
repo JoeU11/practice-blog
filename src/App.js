@@ -4,7 +4,6 @@ import BlogData from './BlogData';
 import Blog from "./components/Blog";
 
 function App() {
-  console.log(BlogData)
   const blogElements = BlogData.map(blog => {
     return (<Blog
       key={blog.id}
@@ -12,13 +11,12 @@ function App() {
     />
     )
   })
-
-  console.log(blogElements)
-
   return (
     <div className="App">
       <Navbar />
-      {blogElements}
+      <section id="blog-container">
+        {blogElements}
+      </section>
     </div>
   );
 }
